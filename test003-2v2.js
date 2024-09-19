@@ -20,7 +20,7 @@ const fetch = async (database, view, cursor) => {
   }
 
   const features = rows.map(row => {
-    const f = {
+    let f = {
       type: 'Feature',
       properties: row,
       geometry: JSON.parse(row.st_asgeojson),
